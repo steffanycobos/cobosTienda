@@ -14,3 +14,10 @@ li{
     color: black;
     background-color: white;
 }
+
+#titulo {
+    color: rgb(255, 191, 0);
+    font-family: 'Combo', cursive;
+font-size: xx-large;
+margin-left: 10px;
+}

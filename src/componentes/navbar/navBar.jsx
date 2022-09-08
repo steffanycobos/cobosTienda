@@ -7,7 +7,9 @@ function Navbar() {
         <div className="Navbar">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+<nav class="navbar navbar-light bg-light ">
+  <span id= "titulo" class="navbar-brand mb-0 h1">Cobos Tienda</span>
+</nav>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
