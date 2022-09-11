@@ -1,0 +1,100 @@
+.card-img{
+    width: 280px;
+    height: 260px;
+    object-fit: cover;
+  }
+  .card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .card{
+    margin: 10px 15px;
+   
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.50);
+    background-color: #fff;
+    overflow: hidden;  
+    transition: all 0.20s ease-in;
+    cursor: pointer;
+  }
+  .container{
+display: -webkit-inline-flex;
+font-family: 'Inconsolata', monospace;
+font-size: medium;
+  }
+  .card:hover{
+    box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.25);
+    transform: translateY(-6px);
+  }
+  
+  .card-detail{
+    padding: 12px 8px;
+  }
+  
+  small{
+    color: #8c8c8e;
+  }
+  .boton{
+    border-radius: 5px;
+margin: 30px;
+
+ }
+ .boton2:hover{
+  box-shadow: 0px 4px 12px 2px rgba(0,0,0,0.25);
+  transform: translateY(-6px);
+ }
+
+
+/**
+ * ----------------------------------------
+ *ANIMACIONES
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

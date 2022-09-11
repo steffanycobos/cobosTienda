@@ -1,15 +1,15 @@
 
 import './App.css';
-import Navbar from './componentes/navbar/navBar';
+import ItemListContainer from "./componentes/componentes/productos/ItemListContainer";
+import Header from "./componentes/Header/Header";
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Header/>
       <header className="App-header">
-    
-        <h1>Tienda Online sin nombre :)</h1>
+        <ItemListContainer/>
       </header>
      
     </div>

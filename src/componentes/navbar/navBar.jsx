@@ -1,5 +1,6 @@
 import React from 'react'
 import "./navBar.css"
+import CartWidget from '../Header/CartWidget'
 
 
 function Navbar() {
@@ -8,7 +9,7 @@ function Navbar() {
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <nav class="navbar navbar-light bg-light ">
-  <span id= "titulo" class="navbar-brand mb-0 h1">Cobos Tienda</span>
+  <span id= "titulo" class="navbar-brand mb-0 h1 hvr-grow " >CurlyQueens</span>
 </nav>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -24,12 +25,13 @@ function Navbar() {
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
       </li>
+
+<CartWidget />
       
 
     </ul>
   </div>
 </nav>
-
         </div>
     )
 }
