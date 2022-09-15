@@ -2,10 +2,11 @@ import React from 'react';
 import "./CartWidget.css";
 
 
+
 function CartWidget() {
     return (
       <div>
-        <span> <img className="carrito" src="https://img.icons8.com/officel/45/000000/add-shopping-cart.png"/></span>
+<img className='carrito' src="https://img.icons8.com/dotty/42/000000/shopping-cart.png"/>
       </div>
     );
   }

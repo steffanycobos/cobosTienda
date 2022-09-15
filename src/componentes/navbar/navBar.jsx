@@ -7,23 +7,23 @@ function Navbar() {
     return (
         <div className="Navbar">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<nav class="navbar navbar-light bg-light ">
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+<nav className="navbar navbar-light bg-light ">
   <span id= "titulo" class="navbar-brand mb-0 h1 hvr-grow " >CurlyQueens</span>
 </nav>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <a className="nav-link" href="#">Home <span class="sr-only"></span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Productos</a>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Productos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">¿Quienes Somos?</a>
+      <li className="nav-item">
+        <a className="nav-link" href="#">¿Quienes Somos?</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Contacto</a>
       </li>
 
 <CartWidget />

@@ -1,5 +1,6 @@
 import React from "react";
-
+import FlexWrapper from "../../FlexWrapper/FlexWrapper";
+import ItemCount from "../../ItemCount/ItemCount";
 import "./cards.css";
 
 function Card(props) {
@@ -13,9 +14,10 @@ function Card(props) {
       <div className="card-detail">
         <h3>{title}</h3>
         <p>{detail}</p>
-        <h4>$ {price}$</h4>
+        <h4>{price}$</h4>
       </div>
-  <button class="boton boton2">Agregar al Carrito</button>
+      <ItemCount stock={5} initial={1} />
+  <button className="boton boton2">Agregar al Carrito</button>
     </div>
   );
 }

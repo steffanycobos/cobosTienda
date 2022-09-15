@@ -1,0 +1,13 @@
+.contador{
+ 
+ display:inline-flex;
+margin-left: 60px;
+}
+.sumaresta{
+    margin:20px;
+  border-radius: 5px;
+  padding: 7px;
+}
+p{
+    font-size: large;
+}
