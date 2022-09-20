@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ItemCount.css"
+
 function ItemCount(props) {
 
 const [count, setCount]= React.useState(0)
@@ -15,7 +16,7 @@ function OnSubtract(){
 return (
     <div className="contador">
         <button onClick={OnSubtract} className='sumaresta'> - </button>  
-      <p>{count}</p>
+   <p>{count}</p>
         <button onClick={OnAdd} className='sumaresta'> + </button>
        
     </div>

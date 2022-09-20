@@ -1,7 +1,7 @@
 import React from "react";
-import FlexWrapper from "../../FlexWrapper/FlexWrapper";
 import ItemCount from "../../ItemCount/ItemCount";
 import "./cards.css";
+
 
 function Card(props) {
   let { price, title, img, detail } = props;
@@ -17,7 +17,10 @@ function Card(props) {
         <h4>{price}$</h4>
       </div>
       <ItemCount stock={5} initial={1} />
-  <button className="boton boton2">Agregar al Carrito</button>
+      <button className="boton boton2">
+        Agregar al Carrito{" "}
+        <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png" />
+      </button>
     </div>
   );
 }
