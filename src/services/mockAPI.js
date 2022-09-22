@@ -40,7 +40,7 @@ const data = [
     id: 4,
     price: 10,
     title: "Maui",
-    detail: "Spray antifrizz",
+    detail: "Rehidrata, nutre y suaviza profundamente el cabello seco y dañado para que tu cabello vuelva a lucir saludable con esta mezcla con Manteca de Karité cremosa, Leche de Coco nutritiva y Aceite de Macadamia puro. Ayuda a mantener el cabello hidratado y sin frizz Maui Moisture Frizz-Free + Shea Butter Leave-in Conditioning Mist. Este spray fácil de usar ayuda a proteger del calor mientras define sus rizos para realzar su belleza natural. Seguro Para Cabello Teñido",
     img: "https://cdn.shopify.com/s/files/1/0503/8895/9421/products/0005280067702_large.jpg?v=1635467933",
     stock: 4,
   },
@@ -80,3 +80,9 @@ export default function getItems() {
     }, 2000);
   });
 }
+
+export function getSingleItem() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(data[4]), 1500);
+  });
+} 
