@@ -72,7 +72,6 @@ const data = [
     stock: 5,
   },
 ];
-
 export default function getItems() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

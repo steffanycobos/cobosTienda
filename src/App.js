@@ -4,6 +4,8 @@ import ItemListContainer from "./componentes/componentes/productos/ItemListConta
 import Header from "./componentes/Header/Header";
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import "bootstrap/dist/css/bootstrap.css";
+import BasicExample from './componentes/ItemDetailContainer/Accordion';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import * as bootstrap from 'bootstrap';
 
 function App() {
@@ -11,10 +13,11 @@ function App() {
     <div className="App">
       <Header/>
       <header className="App-header">
+
       <ItemDetailContainer/>
        {/* <ItemListContainer/>*/}
       </header>
-     
+    
        
     
     </div>

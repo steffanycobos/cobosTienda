@@ -1,6 +1,5 @@
 .contador{
 
-margin-left: 45%;
  display:inline-flex;
 }
 .sumaresta{
@@ -10,4 +9,8 @@ margin-left: 45%;
 }
 p{
     font-size: large;
+}
+
+.contador2{
+  align-items: center;
 }

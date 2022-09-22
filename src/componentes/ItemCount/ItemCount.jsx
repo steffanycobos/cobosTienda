@@ -14,11 +14,13 @@ function OnSubtract(){
    setCount(count - 1)}
 }
 return (
+    <div className="contador2">
     <div className="contador">
         <button onClick={OnSubtract} className='sumaresta'> - </button>  
    <p>{count}</p>
         <button onClick={OnAdd} className='sumaresta'> + </button>
        
+    </div>
     </div>
 )
 }

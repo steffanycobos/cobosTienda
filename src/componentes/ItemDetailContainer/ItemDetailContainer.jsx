@@ -3,7 +3,7 @@ import { getSingleItem } from "../../services/mockAPI"
 import "../componentes/productos/cards.css"
 import ItemListContainer from "../componentes/productos/ItemListContainer"
 import ItemCount from "../ItemCount/ItemCount";
-
+import BasicExample from "./Accordion";
 
 function ItemDetailContainer() {
   let [data, setData] = useState({});
@@ -19,9 +19,9 @@ function ItemDetailContainer() {
       </div>
       <div className="card-detail">
         <h3>{data.title}</h3>
-        <p>{data.detail}</p>
         <h4>{data.price}$</h4>
       </div>
+      <BasicExample/>
       <ItemCount/>
       <button className="boton boton2">
         Agregar al Carrito{" "}
