@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Handlee&family=Inconsolata&display=swap');
+
+.cardDetail {
+    margin-left: 42%;
+    width: 18%;
+
+}
+
+.img {
+    float: left;
+    margin: 30px;
+}
+
+.detalle {
+background-color: rgba(250, 235, 215, 0.647);
+    margin-right: 20px;
+    margin-left:400px ;
+    margin-top: 30px;
+}
+
+h1,h3 {
+    font-family: 'Handlee', cursive;
+    ;
+}
+
+.descripcion {
+
+    text-align: center;
+}

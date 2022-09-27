@@ -1,16 +1,12 @@
-.contador{
 
- display:inline-flex;
-}
 .sumaresta{
+  border: transparent;
     margin:20px;
   border-radius: 5px;
   padding: 7px;
 }
-p{
-    font-size: large;
-}
 
 .contador2{
   align-items: center;
+font-size: larger;
 }

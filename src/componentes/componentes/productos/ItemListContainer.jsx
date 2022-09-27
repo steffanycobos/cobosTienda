@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Card from "./cards";
-import getItems from "../../../services/mockAPI";
-import "./cards.css"
+import "./cards.css";
+import { useParams } from "react-router-dom";
+import getItems, { getItemsByCategory } from "../../../services/mockAPI";
 
 function ItemListContainer() {
   let [data, setData] = useState([]);
 
-  useEffect(() => {
-    getItems().then((respuestaDatos) => setData(respuestaDatos));
-  }, []);
+  const { cat } = useParams();
+  console.log(cat);
 
+  useEffect(() => {
+    if (cat === undefined) {
+      getItems().then((respuestaDatos) => setData(respuestaDatos));
+    } else {
+      getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
+    }
+  }, [cat]);
   return (
     <div>
       <div className="container">
         {data.map((item) => {
           return (
             <Card
-              key={item.id}
+              key={item.key}
+              id={item.id}
               price={item.price}
               title={item.title}
               img={item.img}
@@ -27,5 +35,6 @@ function ItemListContainer() {
         })}
       </div>
     </div>
-  );}
-  export default ItemListContainer;
+  );
+}
+export default ItemListContainer;

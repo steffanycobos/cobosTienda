@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-li{
-
-    display:inline-block;
-    text-align: center;
-    margin:15px;
-   color: rgb(3, 1, 1);
-    text-decoration: none;
-    font-family: 'Inconsolata', monospace;
-    font-size: large;
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+li {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "Inconsolata", monospace;
+  font-size: large;
 }
-.Navbar{
-    color: black;
-    background-color: white;
-}
+
 
 #titulo {
-    color: rgb(255, 191, 0);
-    font-family: 'Combo', cursive;
-font-size: xx-large;
-margin-left: 10px;
+  color: rgb(255, 157, 0);
+  font-family: "Combo", cursive;
+  font-size: xx-large;
+  margin-left: 10px;
+  letter-spacing: 3px;
 }
