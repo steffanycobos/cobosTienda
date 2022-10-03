@@ -19,11 +19,8 @@ function Card(props) {
         <h4>{price}$</h4>
         <Link className="verMas boton2" to={urlDetalles}>Ver Mas</Link>
       </div>
-      <ItemCount stock={stock} initial={1} />
-      <button className="boton boton2">
-        Agregar al Carrito{" "}
-        <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png" alt=""/>
-      </button>
+      <ItemCount stock={stock}/>
+   
     </div>
   );
 }
