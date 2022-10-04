@@ -6,11 +6,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import * as bootstrap from "bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyProvider from "./context/cartContext";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <MyProvider>
         <Header />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
@@ -34,6 +36,7 @@ function App() {
             }
           />
         </Routes>
+        </MyProvider>
       </BrowserRouter>
     </div>
   );

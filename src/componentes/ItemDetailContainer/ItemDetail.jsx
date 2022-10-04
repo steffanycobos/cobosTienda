@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState, useContext} from "react";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../context/cartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetailContainer.css"
 
-function ItemDetail({ course }) {
-  let estadoCarrito = false;
 
- function handleAddToCart(count) {
-    alert(`Agregaste al carrito: ${count} ${course.title}`);
-  }
+function ItemDetail({ course }) {
+  const [estadoCart, setEstadoCart] = useState(false);
+  const { addItem } = useContext(cartContext);
+  const handleAddToCart = (values) => {
+    addItem(course, values);
+    setEstadoCart(true);
+    alert(
+      `Agregaste al carrito ${values} ${course.categoria} de ${course.title}`
+    );
+  };
 
   return (
     <div>
@@ -25,17 +31,16 @@ function ItemDetail({ course }) {
         </div>
       </div>
 
-      {estadoCarrito === false ? (
-        <ItemCount
-          className="boton boton2"
-          stock={course.stock}
-          onAddToCart={handleAddToCart}
-        />
+      {estadoCart === false ? (
+        <ItemCount onAddToCart={handleAddToCart} />
       ) : (
-        <Link className="boton boton2" to="/cart">Finalizar Compra</Link>
+        <div className="margen">
+          <Link className="botonFinalizar verMas boton2 " to={"/cart"}>
+            Finalizar Compra 🥳
+          </Link>
+        </div>
       )}
     </div>
   );
 }
-
 export default ItemDetail;
