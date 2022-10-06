@@ -4,19 +4,21 @@ export const cartContext = createContext();
 
 const { Provider } = cartContext;
 
-const MyProvider = ({ children }) => {
+function MyProvider({ children }) {
   const [cart, setCart] = useState([]);
+
   // esta en el carrito?
-  const isInCart = (id) => {
-    return cart.some((item) => item.id === id);
-  };
+  function isInCart(id) {
+    let found = cart.some((item) => item.id === id);
+    return found;
+  }
   //agregar al carrito
   const addItem = (item, count) => {
     const newCart = {
       ...item,
       count,
     };
-    if (isInCart(newCart.id)) {
+    if (isInCart()) {
       const findProducto = cart.filter((x) => x.id === newCart.id);
       const productoIndex = cart.indexOf(findProducto);
       const copiaCart = [...cart];
@@ -31,9 +33,11 @@ const MyProvider = ({ children }) => {
     return setCart([]);
   };
   // eliminar item
-  const deleteItem = (id) => {
+
+  function deleteItem(id) {
     return setCart(cart.filter((item) => item.id !== id));
-  };
+  }
+
   //cantidad de unidades en el carrito
   const getItemCount = () => {
     return cart.reduce((acc, item) => (acc += item.count), 0);
@@ -46,6 +50,7 @@ const MyProvider = ({ children }) => {
   return (
     <Provider
       value={{
+        cart,
         isInCart,
         addItem,
         emptyCart,
@@ -57,6 +62,6 @@ const MyProvider = ({ children }) => {
       {children}{" "}
     </Provider>
   );
-};
+}
 
 export default MyProvider;

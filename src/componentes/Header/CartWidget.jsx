@@ -3,6 +3,7 @@ import "./CartWidget.css";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {Badge} from '@mui/material'
 import { cartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
 
 function CartWidget() {
 
@@ -10,8 +11,9 @@ function CartWidget() {
   return (
     <div className="carrito">
   <Badge badgeContent={getItemCount()} color="secondary">
-    
-  <ShoppingCartIcon fontSize="large" />
+    <Link to={"/cart"}>
+  <ShoppingCartIcon fontSize="large"  />
+  </Link>
   </Badge>
  
     </div>

@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Handlee&family=Inconsolata&display=swap');
+.cart{
+    font-family:"Inconsolata", monospace;
+    font-size: large;
+    background-color: rgba(235, 234, 232, 0.745);
+align-items: flex-start;
+margin-bottom: 20px;
+}
+.titulo{
+    font-family: 'Handlee', cursive;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    font-size: larger;
+}
+.imagencarrito{
+    float: left;
+}
+
+
+.cajaFinal{
+    font-family:"Inconsolata", monospace;
+    display: inline;
+float:left;
+
+}
+.boton3{
+    font-family:"Inconsolata", monospace;
+    margin-left:990px ;
+    border: transparent;
+    padding: 10px;
+}
+
+.carritoVacio{
+    margin-top: 10px ;
+}
+
+.botonCompra{
+    border-radius: 5px;
+    background-color: rgba(112, 115, 118, 0.296);
+    color:black;
+    font-family:"Inconsolata", monospace;
+    font-size: larger;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}

@@ -5,29 +5,30 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetailContainer.css"
 
 
-function ItemDetail({ course }) {
+function ItemDetail({ item}) {
   const [estadoCart, setEstadoCart] = useState(false);
   const { addItem } = useContext(cartContext);
-  const handleAddToCart = (values) => {
-    addItem(course, values);
+  
+  function handleAddToCart(count) {
+    addItem(item, count);
     setEstadoCart(true);
     alert(
-      `Agregaste al carrito ${values} ${course.categoria} de ${course.title}`
+      `Agregaste al carrito ${count} ${item.categoria} de ${item.title}`
     );
   };
 
   return (
     <div>
       <div>
-        <img className="img" src={course.img} alt=""></img>
+        <img className="img" src={item.img} alt=""></img>
       </div>
       <div className="detalle">
         <div className="card-detail">
           <h1>
-            <strong>{course.title}</strong>
+            <strong>{item.title}</strong>
           </h1>
-          <h4>{course.price}$</h4>
-          <p className="descripcion">{course.detail}</p>
+          <h4>{item.price}$</h4>
+          <p className="descripcion">{item.detail}</p>
         </div>
       </div>
 

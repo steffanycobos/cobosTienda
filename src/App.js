@@ -7,10 +7,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import * as bootstrap from "bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyProvider from "./context/cartContext";
+import CartView from "./componentes/CartView/CartView";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <BrowserRouter>
       <MyProvider>
         <Header />
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categoria/:cat" element={<ItemListContainer />}/>
           <Route path="/detalles/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" />
+          <Route path="/cart" element={<CartView/>} />
           <Route
             path="*"
             element={
