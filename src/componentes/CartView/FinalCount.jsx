@@ -7,7 +7,7 @@ import "./cartView.css";
 
 function FinalCount() {
   const context = useContext(cartContext);
-  const { cart, emptyCart, getItemCount, getItemPrice } = context;
+  const { emptyCart, getItemCount, getItemPrice } = context;
 
   return (
     <div>

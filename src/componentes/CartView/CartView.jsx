@@ -9,10 +9,9 @@ import IconButton from "@mui/material/IconButton";
 
 function CartView() {
   const context = useContext(cartContext);
-  const { cart, isInCart, deleteItem, getItemCount, getItemPrice } = context;
-  let idCart = parseInt(cart.map((item) => item.id));
+  const { cart, deleteItem } = context;
 
-  if (isInCart(idCart) === false) {
+  if (cart.length === 0) {
     return (
       <div>
         {" "}

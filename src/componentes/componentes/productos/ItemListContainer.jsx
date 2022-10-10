@@ -3,7 +3,7 @@ import Card from "./cards";
 import { DotWave } from '@uiball/loaders'
 import "./cards.css";
 import { useParams } from "react-router-dom";
-import getItems, { getItemsByCategory } from "../../../services/mockAPI";
+import {getItems, getItemsByCategory} from "../../../services/firestore";
 
 
 function ItemListContainer() {
@@ -21,7 +21,7 @@ function ItemListContainer() {
         .finally(() => setIsLoading(false));
     } else {
       getItemsByCategory(cat)
-        .then((respuestaDatos) => setData(respuestaDatos))
+        .then((respuestaDatosFiltrados) => setData(respuestaDatosFiltrados))
         .finally(() => setIsLoading(false));
     }
     return () => {
@@ -31,7 +31,7 @@ function ItemListContainer() {
 
   
   return (
-    <div>
+    <div >
       {isLoading ? (
         <div className="dots">
        <DotWave 
@@ -48,7 +48,7 @@ function ItemListContainer() {
                 onClickImagen={() => {
                   console.log("click card");
                 }}
-                key={item.key}
+                key={item.id}
                 id={item.id}
                 price={item.price}
                 title={item.title}

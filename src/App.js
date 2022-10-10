@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyProvider from "./context/cartContext";
 import CartView from "./componentes/CartView/CartView";
 
+
 function App() {
   return (
     <div className="App" >
