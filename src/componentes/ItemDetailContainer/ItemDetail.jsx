@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetailContainer.css"
+import Swal from 'sweetalert2'
 
 
 function ItemDetail({ item}) {
@@ -12,9 +13,9 @@ function ItemDetail({ item}) {
   function handleAddToCart(count) {
     addItem(item, count);
     setEstadoCart(true);
-    alert(
-      `Agregaste al carrito ${count} ${item.categoria} de ${item.title}`
-    );
+    Swal.fire({
+      icon: 'success',
+      title: 'Agregaste '+ count +' ' + item.title })
   };
 
   return (
