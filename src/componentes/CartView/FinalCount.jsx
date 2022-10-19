@@ -12,13 +12,14 @@ function FinalCount() {
   return (
     <div>
       <div className="cajaFinal">
-        N° de Articulos: {getItemCount()}
+      <strong>  N° de Articulos: {getItemCount()}</strong>
         {"   "}
-        Precio Total:{getItemPrice()}
+       <strong>Precio Total:{getItemPrice()} $ </strong> 
+        
         {"  "}
       </div>
       <button className="boton3" onClick={emptyCart}>
-        Vaciar <DeleteIcon />
+        Vaciar Carrito <DeleteIcon />
       </button>
     </div>
   );

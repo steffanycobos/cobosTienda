@@ -1,11 +1,12 @@
 import React from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton";
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { Link } from "react-router-dom";
 import FinalCount from "./FinalCount";
+
 import "./cartView.css";
-import DeleteIcon from "@mui/icons-material/Delete";
-import IconButton from "@mui/material/IconButton";
 
 function CartView() {
   const context = useContext(cartContext);
@@ -24,27 +25,37 @@ function CartView() {
         </Link>{" "}
       </div>
     );
-  } else {
-    return cart.map((item) => (
-      <div key={item.key} className="cart">
-        <img className="imagencarrito" src={item.img} alt="" />
-
-        <strong className="titulo">{item.title}</strong>
-        <div className="detallescarrito">
-          <br />
-          Precio:{item.price} $ Cantidad: {item.count}
-        </div>
-
-        <br />
-
-        <IconButton onClick={() => deleteItem(item.id)} aria-label="delete">
-          <DeleteIcon />
-        </IconButton>
-
-        <FinalCount />
-      </div>
-    ));
   }
+
+  return (
+    <>
+      {cart.map((item) => {
+        return (
+          <div key={item.key} className="cart">
+            <img className="imagencarrito" src={item.img} alt="" />
+
+            <strong className="titulo">{item.title}</strong>
+            <div className="detallescarrito">
+              <br />
+              Precio:{item.price} $ Cantidad: {item.count}
+            </div>
+
+            <br />
+
+            <IconButton onClick={() => deleteItem(item.id)} aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </div>
+        );
+      })}
+
+      <FinalCount />
+      <Link className="botonCompra" to="/checkout/orderid">
+        {" "}
+        Finaliza la Compra
+      </Link>
+    </>
+  );
 }
 
 export default CartView;

@@ -8,6 +8,7 @@ import * as bootstrap from "bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyProvider from "./context/cartContext";
 import CartView from "./componentes/CartView/CartView";
+import Checkout from "./componentes/Checkout/Checkout";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/categoria/:cat" element={<ItemListContainer />}/>
           <Route path="/detalles/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartView/>} />
+          <Route path="/checkout/:orderid" element={<Checkout />} />
           <Route
             path="*"
             element={
