@@ -31,7 +31,8 @@ h1,h3 {
     font-family: 'Inconsolata', monospace;
     font-size:large;
     text-decoration: none;
- background-color: #d5d5db9e;;
+ background-color: #d5d5db9e;
+ margin:20px
 
   }
 

@@ -1,4 +1,5 @@
 import "./App.css";
+import {useEffect} from 'react';
 import ItemListContainer from "./componentes/componentes/productos/ItemListContainer";
 import Header from "./componentes/Header/Header";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
@@ -9,9 +10,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyProvider from "./context/cartContext";
 import CartView from "./componentes/CartView/CartView";
 import Checkout from "./componentes/Checkout/Checkout";
+import { exportDataToFirestore } from "./services/firestore";
 
 
 function App() {
+  useEffect(() => {
+    exportDataToFirestore()
+  }, [])
+
   return (
     <div className="App" >
       <BrowserRouter>

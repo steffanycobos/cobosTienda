@@ -38,7 +38,10 @@ function ItemDetail({ item}) {
       ) : (
         <div className="margen">
           <Link className="botonFinalizar verMas boton2 " to={"/cart"}>
-            Finalizar Compra 🥳
+          Ir al Carrito 🛒
+          </Link>
+          <Link className="botonFinalizar verMas boton2 " to={"/"}>
+          Seguir Comprando
           </Link>
         </div>
       )}

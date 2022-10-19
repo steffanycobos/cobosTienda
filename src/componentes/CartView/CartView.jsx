@@ -54,6 +54,9 @@ function CartView() {
         {" "}
         Finaliza la Compra
       </Link>
+      <Link className="botonCompra" to={"/"}>
+          Seguir Comprando
+          </Link>
     </>
   );
 }

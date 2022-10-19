@@ -6,6 +6,7 @@ const { Provider } = cartContext;
 
 function MyProvider({ children }) {
   const [cart, setCart] = useState([]);
+  
 
   // esta en el carrito?
   function isInCart(id) {
