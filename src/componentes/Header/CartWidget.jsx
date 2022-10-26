@@ -10,9 +10,9 @@ function CartWidget() {
   const {getItemCount}= useContext(cartContext)
   return (
     <div className="carrito">
-  <Badge badgeContent={getItemCount()} color="secondary">
+  <Badge badgeContent={getItemCount()} color="warning">
     <Link to={"/cart"}>
-  <ShoppingCartIcon fontSize="large"  />
+  <ShoppingCartIcon fontSize="large" color="action"  />
   </Link>
   </Badge>
  

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-
 function ItemCount({ stock, onAddToCart }) {
-
-  console.log(stock)
   const [count, setCount] = useState(1);
   const handleAdd = () => {
     count >= stock
@@ -13,7 +10,7 @@ function ItemCount({ stock, onAddToCart }) {
   };
 
   const handleSubtract = () => {
-    if (count  > 0) {
+    if (count > 0) {
       setCount(count - 1);
     }
   };
@@ -43,4 +40,3 @@ function ItemCount({ stock, onAddToCart }) {
 }
 
 export default ItemCount;
-

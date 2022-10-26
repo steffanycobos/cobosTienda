@@ -14,19 +14,20 @@ function MyProvider({ children }) {
     return found;
   }
   //agregar al carrito
-  const addItem = (item, count) => {
-    const newCart = {
-      ...item,
-      count,
-    };
-    if (isInCart()) {
-      const findProducto = cart.filter((x) => x.id === newCart.id);
-      const productoIndex = cart.indexOf(findProducto);
-      const copiaCart = [...cart];
-      copiaCart[productoIndex].count += count;
-      setCart(copiaCart);
+  function addItem(item, count) {
+    if (isInCart(item.id)) {
+      let newCart = cart.map((itemMapeo) => {
+        if (itemMapeo.id === item.id) {
+          itemMapeo.count += count;
+          return itemMapeo;
+        } else return itemMapeo;
+      });
+
+      setCart(newCart);
     } else {
-      setCart([...cart, newCart]);
+      let newCart = cart.map((item) => item);
+      newCart.push({ ...item, count: count });
+      setCart(newCart);
     }
   };
   // vaciar carrito

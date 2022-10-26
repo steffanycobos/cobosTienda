@@ -15,8 +15,11 @@ function ItemDetail({ item}) {
     setEstadoCart(true);
     Swal.fire({
       icon: 'success',
-      title: 'Agregaste '+ count +' ' + item.title })
-  };
+      title: 'Agregaste '+ count +' ' + item.title ,
+      color: "#716add",
+        background: "#fff url(/assets/productoFoto/fondoAlert.png)",
+        backdrop: `rgba(116,73, 106, 0.4)`,
+  })};
 
   return (
     <div>

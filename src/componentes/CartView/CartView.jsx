@@ -16,9 +16,10 @@ function CartView() {
     return (
       <div>
         {" "}
-        <h3 className="carritoVacio">
-          Tu carrito esta vacio... Quieres seguir comprando?{" "}
+        <h3 className="carritoVacio"> <strong>    Tu carrito esta vacio... Quieres comprar?{" "}</strong>
+      
         </h3>
+        <iframe src="https://giphy.com/embed/TdvLcceTQeEBZK88OH" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <br />
         <Link className="botonCompra" to={"/"}>
           {" "}
           Seguir Comprando!
@@ -31,7 +32,7 @@ function CartView() {
     <>
       {cart.map((item) => {
         return (
-          <div key={item.key} className="cart">
+          <div key={item.id} className="cart">
             <img className="imagencarrito" src={item.img} alt="" />
 
             <strong className="titulo">{item.title}</strong>

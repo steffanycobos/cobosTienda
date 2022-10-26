@@ -22,6 +22,7 @@ margin-bottom: 20px;
     font-family:"Inconsolata", monospace;
     display: inline;
 float:left;
+font-size: larger;
 
 }
 .boton3{
@@ -33,6 +34,7 @@ float:left;
 
 .carritoVacio{
     margin-top: 10px ;
+    align-items: center;
 }
 
 .botonCompra{
@@ -45,4 +47,7 @@ float:left;
     text-decoration: none;
     margin-top: 10px;
     margin: 20px;
+}
+h3{
+    font-size: xx-large;
 }

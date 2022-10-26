@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Concert+One&family=DM+Serif+Text&family=Handlee&family=Inconsolata&family=Indie+Flower&display=swap');
+
+#titulo {
+    color: rgb(255, 157, 0);
+    font-family: "Combo", cursive;
+    font-size: xx-large;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  
+  .img2{
+    float: right;
+    margin-right: 50px;
+  }
+  
+  .posicion{
+    float:left;
+ font-family: 'Concert One', cursive;
+    letter-spacing: 5px;
+    float: left;
+    margin-top: 200px;
+ 
+  }
+  .escrito{
+ 
+
+    color: rgba(0, 0, 0, 0.699);
+    background-color: rgba(250, 235, 215, 0.511);
+
+  }
+  .p1{
+    font-family: "Combo", cursive;
+    margin-left: 10px;
+    font-weight: bold;
+    background-color: rgba(250, 235, 215, 0.647);
+  }
+  .link{
+     color: rgb(81, 8, 150);
+     background-color: rgba(152, 192, 224, 0.625);
+     font-size: large;
+     text-decoration:underline;
+     text-decoration: wavy;
+     padding: 5px;
+     border-radius: 3px;
+  }

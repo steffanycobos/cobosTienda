@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Card from "./cards";
-import { DotWave } from '@uiball/loaders'
+import { DotWave } from "@uiball/loaders";
 import "./cards.css";
 import { useParams } from "react-router-dom";
-import {getItems, getItemsByCategory} from "../../../services/firestore";
-
+import { getItems, getItemsByCategory } from "../../../services/firestore";
+import "../../../grillas.css";
 
 function ItemListContainer() {
   let [data, setData] = useState([]);
@@ -24,30 +24,20 @@ function ItemListContainer() {
         .then((respuestaDatosFiltrados) => setData(respuestaDatosFiltrados))
         .finally(() => setIsLoading(false));
     }
-    return () => {
-      console.log("Componente Item List desmontado");
-    };
   }, [cat]);
 
-  
   return (
-    <div >
+    <div>
       {isLoading ? (
         <div className="dots">
-       <DotWave 
-       size={60}
-       speed={1} 
-       color="orange" 
-      /></div>
-      )
-       : (
-        <div className="main container">
+          <DotWave size={60} speed={1} color="orange" />
+        </div>
+      ) : (
+        <div className="main container" id="grilla">
           {data.map((item) => {
             return (
               <Card
-                onClickImagen={() => {
-                  console.log("click card");
-                }}
+                className="productos"
                 key={item.id}
                 id={item.id}
                 price={item.price}
