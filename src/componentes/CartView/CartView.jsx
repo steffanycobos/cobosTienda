@@ -19,7 +19,7 @@ function CartView() {
         <h3 className="carritoVacio"> <strong>    Tu carrito esta vacio... Quieres comprar?{" "}</strong>
       
         </h3>
-        <iframe src="https://giphy.com/embed/TdvLcceTQeEBZK88OH" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <br />
+        <iframe title="gif2" src="https://giphy.com/embed/TdvLcceTQeEBZK88OH" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <br />
         <Link className="botonCompra" to={"/"}>
           {" "}
           Seguir Comprando!

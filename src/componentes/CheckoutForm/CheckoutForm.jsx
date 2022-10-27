@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { json, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { createBuyOrder } from "../../services/firestore";
@@ -63,11 +63,7 @@ form.reset()
   return (
     <>
         <form onSubmit={handleCheckout} id="form">
-          <div className="hidden sm:block" aria-hidden="true">
-            <div className="py-5">
-              <div className="border-t border-gray-200" />
-            </div>
-          </div>
+       
           
 
           <div className="md:col-span-1">
