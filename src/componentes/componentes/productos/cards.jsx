@@ -19,8 +19,6 @@ function Card(props) {
         
         <Link className="verMas boton2" to={urlDetalles}>Ver Mas</Link>
       </div>
- 
-   
     </div>
   );
 }

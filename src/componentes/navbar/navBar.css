@@ -17,3 +17,9 @@ li {
   margin-left: 10px;
   letter-spacing: 3px;
 }
+
+
+.navbar-collapse {
+  flex-basis: 100%;
+  align-items: center;
+}

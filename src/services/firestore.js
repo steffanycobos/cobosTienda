@@ -1,7 +1,15 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs,getDoc, doc,addDoc, query,where } from "firebase/firestore"
-import { getAnalytics } from "firebase/analytics";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  getDoc,
+  doc,
+  addDoc,
+  query,
+  where,
+} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,41 +22,40 @@ const firebaseConfig = {
   storageBucket: "curlyqueens37555-f0359.appspot.com",
   messagingSenderId: "980055198075",
   appId: "1:980055198075:web:b7e948fe3c0b87cec215de",
-  measurementId: "G-XSJ6ZHNVE4"
+  measurementId: "G-XSJ6ZHNVE4",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const firestore= getFirestore(app)
+const firestore = getFirestore(app);
 
-export async function getItems(){
-const myCollection = collection(firestore, "productos")
-let snapShotDB= await getDocs(myCollection);
-let dataDocs= snapShotDB.docs.map(documento=> {
-  let docFormateado={...documento.data(), id:documento.id}
-  return docFormateado;
-});
-
-return dataDocs;
-}
-
-export async function getSingleItem(idParams){
-  const docRef= doc(firestore, "productos", idParams);
-  const docSnapshot= await getDoc(docRef);
-  const docFormateado={...docSnapshot.data(), id: docSnapshot.id}
-  return docFormateado
-}
-
-export async function getItemsByCategory(catParams){
-  const collectionRef= collection (firestore,"productos");
-  const queryCat= query(collectionRef,where("categoria","==",catParams));
-  const respuesta= await getDocs(queryCat)
-  let dataDocs= respuesta.docs.map(documento=> {
-    let docFormateado={...documento.data(), id:documento.id}
+export async function getItems() {
+  const myCollection = collection(firestore, "productos");
+  let snapShotDB = await getDocs(myCollection);
+  let dataDocs = snapShotDB.docs.map((documento) => {
+    let docFormateado = { ...documento.data(), id: documento.id };
     return docFormateado;
-})
-return dataDocs
+  });
+
+  return dataDocs;
+}
+
+export async function getSingleItem(idParams) {
+  const docRef = doc(firestore, "productos", idParams);
+  const docSnapshot = await getDoc(docRef);
+  const docFormateado = { ...docSnapshot.data(), id: docSnapshot.id };
+  return docFormateado;
+}
+
+export async function getItemsByCategory(catParams) {
+  const collectionRef = collection(firestore, "productos");
+  const queryCat = query(collectionRef, where("categoria", "==", catParams));
+  const respuesta = await getDocs(queryCat);
+  let dataDocs = respuesta.docs.map((documento) => {
+    let docFormateado = { ...documento.data(), id: documento.id };
+    return docFormateado;
+  });
+  return dataDocs;
 }
 
 export async function createBuyOrder(orderData) {
@@ -58,7 +65,4 @@ export async function createBuyOrder(orderData) {
   return respuesta.id;
 }
 
-
-
-
-export default firestore ;
+export default firestore;

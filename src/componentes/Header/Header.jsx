@@ -1,12 +1,9 @@
-
 import Navbar from "../navbar/navBar";
 
 function Header() {
-
   return (
     <header>
-        <Navbar/>
-        
+      <Navbar />
     </header>
   );
 }

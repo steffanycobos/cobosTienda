@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { Link } from "react-router-dom";
 import FinalCount from "./FinalCount";
-
 import "./cartView.css";
 
 function CartView() {
@@ -16,11 +15,21 @@ function CartView() {
     return (
       <div>
         {" "}
-        <h3 className="carritoVacio"> <strong>    Tu carrito esta vacio... Quieres comprar?{" "}</strong>
-      
+        <h3 className="carritoVacio">
+          {" "}
+          <strong> Tu carrito esta vacio... Quieres comprar? </strong>
         </h3>
-        <iframe title="gif2" src="https://giphy.com/embed/TdvLcceTQeEBZK88OH" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> <br />
-        <Link className="botonCompra" to={"/"}>
+        <iframe
+          title="gif2"
+          src="https://giphy.com/embed/TdvLcceTQeEBZK88OH"
+          width="480"
+          height="480"
+          frameBorder="0"
+          className="giphy-embed"
+          allowFullScreen
+        ></iframe>{" "}
+        <br />
+        <Link className="botonCompra" to={"/listado"}>
           {" "}
           Seguir Comprando!
         </Link>{" "}
@@ -34,15 +43,12 @@ function CartView() {
         return (
           <div key={item.id} className="cart">
             <img className="imagencarrito" src={item.img} alt="" />
-
             <strong className="titulo">{item.title}</strong>
             <div className="detallescarrito">
               <br />
               Precio:{item.price} $ Cantidad: {item.count}
             </div>
-
             <br />
-
             <IconButton onClick={() => deleteItem(item.id)} aria-label="delete">
               <DeleteIcon />
             </IconButton>
@@ -55,9 +61,9 @@ function CartView() {
         {" "}
         Finaliza la Compra
       </Link>
-      <Link className="botonCompra" to={"/"}>
-          Seguir Comprando
-          </Link>
+      <Link className="botonCompra" to={"/listado"}>
+        Seguir Comprando
+      </Link>
     </>
   );
 }

@@ -5,7 +5,7 @@ import "./inicio.css";
 function Inicio() {
   return (
     <section>
-      <div className=" posicion puff-in-hor">
+      <div className=" posicion text-focus-in">
         <h2> Hola!</h2>
         <h3 className="escrito">
           {" "}
@@ -33,9 +33,9 @@ function Inicio() {
       </div>
       <div>
         <img
-          className="img2"
+          className="img2, text-focus-in"
           src="/assets/productoFoto/Asunto(3).png"
-          alt="yo"
+          alt="img inicio"
         />
       </div>
     </section>

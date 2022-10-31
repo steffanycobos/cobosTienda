@@ -6,9 +6,8 @@ const { Provider } = cartContext;
 
 function MyProvider({ children }) {
   const [cart, setCart] = useState([]);
-  
 
-  // esta en el carrito?
+  // Esta en el carrito?
   function isInCart(id) {
     let found = cart.some((item) => item.id === id);
     return found;
@@ -16,11 +15,11 @@ function MyProvider({ children }) {
   //agregar al carrito
   function addItem(item, count) {
     if (isInCart(item.id)) {
-      let newCart = cart.map((itemMapeo) => {
-        if (itemMapeo.id === item.id) {
-          itemMapeo.count += count;
-          return itemMapeo;
-        } else return itemMapeo;
+      let newCart = cart.map((x) => {
+        if (x.id === item.id) {
+          x.count += count;
+          return x;
+        } else return x;
       });
 
       setCart(newCart);
@@ -29,7 +28,7 @@ function MyProvider({ children }) {
       newCart.push({ ...item, count: count });
       setCart(newCart);
     }
-  };
+  }
   // vaciar carrito
   const emptyCart = () => {
     return setCart([]);
